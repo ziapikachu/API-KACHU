@@ -11,12 +11,12 @@ API Epitech for ZIA Project (Promo 2018)
 
 #Qui sommes-nous et comment nous contacter ?
 
-Mathieu Bourmaud (bourma_m)
-Martin Porrès (porres_m)
-Théo Perraudin (perrau_t)
-Sebastien Cache-Delanos (cache-_s)
-Jordan Chazottes (chazot_a)
-Delphine Poupon (poupon_d)
+- Mathieu Bourmaud (bourma_m)
+- Martin Porrès (porres_m)
+- Théo Perraudin (perrau_t)
+- Sebastien Cache-Delanos (cache-_s)
+- Jordan Chazottes (chazot_a)
+- Delphine Poupon (poupon_d)
 
 Pour tout problème technique, veuillez créer un ticket en suivant le format indiqué dans notre FAQ.
 
