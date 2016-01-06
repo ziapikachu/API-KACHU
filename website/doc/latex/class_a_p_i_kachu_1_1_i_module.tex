@@ -1,0 +1,110 @@
+\hypertarget{class_a_p_i_kachu_1_1_i_module}{}\section{A\+P\+I\+Kachu\+:\+:I\+Module Class Reference}
+\label{class_a_p_i_kachu_1_1_i_module}\index{A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}}
+
+
+Base interface for a module.  
+
+
+
+
+{\ttfamily \#include $<$I\+Module.\+h$>$}
+
+Inheritance diagram for A\+P\+I\+Kachu\+:\+:I\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_p_i_kachu_1_1_i_module}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_a_p_i_kachu_1_1_i_module_a594205683c6dd0af322d15d2d4557ea7}{exec} (\hyperlink{class_a_p_i_kachu_1_1_i_http_transaction}{I\+Http\+Transaction} $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Method to be used by the server on each H\+T\+TP query received. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_a_p_i_kachu_1_1_i_module_a7dbb157b5dd00111c9164b9fa078e151}{init} (\hyperlink{class_a_p_i_kachu_1_1_i_server}{I\+Server} $\ast$)=0
+\begin{DoxyCompactList}\small\item\em Method to be used when the server is started. \end{DoxyCompactList}\item 
+virtual uint8 \hyperlink{class_a_p_i_kachu_1_1_i_module_abd348ba61de8854ba4c9cf0d3b19541c}{get\+Module\+Type} () const  =0
+\begin{DoxyCompactList}\small\item\em Getter for the module\textquotesingle{}s type. \end{DoxyCompactList}\item 
+virtual uint8 \hyperlink{class_a_p_i_kachu_1_1_i_module_ad0ec3789fb8afa922937f8e95db8badf}{get\+Module\+Flags} () const  =0
+\begin{DoxyCompactList}\small\item\em Getter for the module\textquotesingle{}s flags. \end{DoxyCompactList}\item 
+virtual uint8 \hyperlink{class_a_p_i_kachu_1_1_i_module_aaad7d8817c8b1344fbe310d7e5e85404}{get\+Handled\+Methods} () const  =0
+\begin{DoxyCompactList}\small\item\em Getter for the module\textquotesingle{}s handled methods. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base interface for a module. 
+
+Implements the basic methods to be used by the server 
+
+\subsection{Member Function Documentation}
+\index{A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}!exec@{exec}}
+\index{exec@{exec}!A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}}
+\subsubsection[{\texorpdfstring{exec(\+I\+Http\+Transaction $\ast$)=0}{exec(IHttpTransaction *)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool A\+P\+I\+Kachu\+::\+I\+Module\+::exec (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Http\+Transaction} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_module_a594205683c6dd0af322d15d2d4557ea7}{}\label{class_a_p_i_kachu_1_1_i_module_a594205683c6dd0af322d15d2d4557ea7}
+
+
+Method to be used by the server on each H\+T\+TP query received. 
+
+Edits the \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction}{I\+Http\+Transaction} and returns true on success and false on failure If the module has the required flag, it must set the response to an appropriate error status code on failure 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction}{I\+Http\+Transaction}} & $\ast$ -\/ the transaction on which the module will apply \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}!get\+Handled\+Methods@{get\+Handled\+Methods}}
+\index{get\+Handled\+Methods@{get\+Handled\+Methods}!A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}}
+\subsubsection[{\texorpdfstring{get\+Handled\+Methods() const  =0}{getHandledMethods() const  =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8 A\+P\+I\+Kachu\+::\+I\+Module\+::get\+Handled\+Methods (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_module_aaad7d8817c8b1344fbe310d7e5e85404}{}\label{class_a_p_i_kachu_1_1_i_module_aaad7d8817c8b1344fbe310d7e5e85404}
+
+
+Getter for the module\textquotesingle{}s handled methods. 
+
+Specifies as a bitmask the methods on which the module will be executed
+
+See documentation for e\+Http\+Method \index{A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}!get\+Module\+Flags@{get\+Module\+Flags}}
+\index{get\+Module\+Flags@{get\+Module\+Flags}!A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}}
+\subsubsection[{\texorpdfstring{get\+Module\+Flags() const  =0}{getModuleFlags() const  =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8 A\+P\+I\+Kachu\+::\+I\+Module\+::get\+Module\+Flags (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_module_ad0ec3789fb8afa922937f8e95db8badf}{}\label{class_a_p_i_kachu_1_1_i_module_ad0ec3789fb8afa922937f8e95db8badf}
+
+
+Getter for the module\textquotesingle{}s flags. 
+
+See documentation for e\+Module\+Flags \index{A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}!get\+Module\+Type@{get\+Module\+Type}}
+\index{get\+Module\+Type@{get\+Module\+Type}!A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}}
+\subsubsection[{\texorpdfstring{get\+Module\+Type() const  =0}{getModuleType() const  =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint8 A\+P\+I\+Kachu\+::\+I\+Module\+::get\+Module\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_module_abd348ba61de8854ba4c9cf0d3b19541c}{}\label{class_a_p_i_kachu_1_1_i_module_abd348ba61de8854ba4c9cf0d3b19541c}
+
+
+Getter for the module\textquotesingle{}s type. 
+
+Specifies as a bitmask the possible steps of execution for the module See documentation for e\+Module\+Type \index{A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}!init@{init}}
+\index{init@{init}!A\+P\+I\+Kachu\+::\+I\+Module@{A\+P\+I\+Kachu\+::\+I\+Module}}
+\subsubsection[{\texorpdfstring{init(\+I\+Server $\ast$)=0}{init(IServer *)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool A\+P\+I\+Kachu\+::\+I\+Module\+::init (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Server} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_module_a7dbb157b5dd00111c9164b9fa078e151}{}\label{class_a_p_i_kachu_1_1_i_module_a7dbb157b5dd00111c9164b9fa078e151}
+
+
+Method to be used when the server is started. 
+
+Return true on success, false on failure 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_a_p_i_kachu_1_1_i_server}{I\+Server}} & $\ast$ \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mathieu/\+Documents/\+Git\+Hub/\+A\+P\+I-\/\+M\+E\+A\+L/\+A\+P\+I/I\+Module.\+h\end{DoxyCompactItemize}

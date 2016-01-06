@@ -1,0 +1,52 @@
+\hypertarget{class_a_p_i_kachu_1_1_i_http_client}{}\section{A\+P\+I\+Kachu\+:\+:I\+Http\+Client Class Reference}
+\label{class_a_p_i_kachu_1_1_i_http_client}\index{A\+P\+I\+Kachu\+::\+I\+Http\+Client@{A\+P\+I\+Kachu\+::\+I\+Http\+Client}}
+
+
+Base interface for a client sending a request.  
+
+
+
+
+{\ttfamily \#include $<$I\+Http\+Client.\+h$>$}
+
+Inheritance diagram for A\+P\+I\+Kachu\+:\+:I\+Http\+Client\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_p_i_kachu_1_1_i_http_client}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual size\+\_\+t \hyperlink{class_a_p_i_kachu_1_1_i_http_client_a8a6f4cfb1f5cc6b75ba45f707e5aa7bd}{send} (const \hyperlink{class_a_p_i_kachu_1_1_i_http_response}{I\+Http\+Response} \&response)=0
+\begin{DoxyCompactList}\small\item\em Sends a response to the client. \end{DoxyCompactList}\item 
+virtual const I\+I\+P\+Address \& \hyperlink{class_a_p_i_kachu_1_1_i_http_client_a023c2fcc94ae6757ec1fc0a27cccba1d}{get\+I\+P\+Address} () const  =0\hypertarget{class_a_p_i_kachu_1_1_i_http_client_a023c2fcc94ae6757ec1fc0a27cccba1d}{}\label{class_a_p_i_kachu_1_1_i_http_client_a023c2fcc94ae6757ec1fc0a27cccba1d}
+
+\begin{DoxyCompactList}\small\item\em Getter for the IP address. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base interface for a client sending a request. 
+
+\subsection{Member Function Documentation}
+\index{A\+P\+I\+Kachu\+::\+I\+Http\+Client@{A\+P\+I\+Kachu\+::\+I\+Http\+Client}!send@{send}}
+\index{send@{send}!A\+P\+I\+Kachu\+::\+I\+Http\+Client@{A\+P\+I\+Kachu\+::\+I\+Http\+Client}}
+\subsubsection[{\texorpdfstring{send(const I\+Http\+Response \&response)=0}{send(const IHttpResponse &response)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual size\+\_\+t A\+P\+I\+Kachu\+::\+I\+Http\+Client\+::send (
+\begin{DoxyParamCaption}
+\item[{const {\bf I\+Http\+Response} \&}]{response}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_client_a8a6f4cfb1f5cc6b75ba45f707e5aa7bd}{}\label{class_a_p_i_kachu_1_1_i_http_client_a8a6f4cfb1f5cc6b75ba45f707e5aa7bd}
+
+
+Sends a response to the client. 
+
+Returns -\/1 on error or the number of bytes sent 
+\begin{DoxyParams}{Parameters}
+{\em const} & \hyperlink{class_a_p_i_kachu_1_1_i_http_response}{I\+Http\+Response} \&response -\/ the response to be sent \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mathieu/\+Documents/\+Git\+Hub/\+A\+P\+I-\/\+M\+E\+A\+L/\+A\+P\+I/I\+Http\+Client.\+h\end{DoxyCompactItemize}

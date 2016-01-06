@@ -1,0 +1,102 @@
+\hypertarget{namespace_a_p_i_kachu}{}\section{A\+P\+I\+Kachu Namespace Reference}
+\label{namespace_a_p_i_kachu}\index{A\+P\+I\+Kachu@{A\+P\+I\+Kachu}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_a_p_i_kachu_1_1_byte_buffer}{Byte\+Buffer}
+\begin{DoxyCompactList}\small\item\em Container for a raw byte array. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_a_p_i_object}{I\+A\+P\+I\+Object}
+\begin{DoxyCompactList}\small\item\em Specifies the A\+PI from which an object comes. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_config}{I\+Config}
+\begin{DoxyCompactList}\small\item\em Base interface for the configuration of the server. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_config_value}{I\+Config\+Value}
+\begin{DoxyCompactList}\small\item\em Configuration value. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_http_client}{I\+Http\+Client}
+\begin{DoxyCompactList}\small\item\em Base interface for a client sending a request. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_http_query}{I\+Http\+Query}
+\begin{DoxyCompactList}\small\item\em Base class for an H\+T\+TP query. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_http_request}{I\+Http\+Request}
+\begin{DoxyCompactList}\small\item\em Contains a request sent by a client. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_http_response}{I\+Http\+Response}
+\begin{DoxyCompactList}\small\item\em Contains a response to be sent to a client. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction}{I\+Http\+Transaction}
+\begin{DoxyCompactList}\small\item\em Class containing informations about an H\+T\+TP transaction. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_module}{I\+Module}
+\begin{DoxyCompactList}\small\item\em Base interface for a module. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_i_server}{I\+Server}
+\begin{DoxyCompactList}\small\item\em Base interface for the server. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_p_i_kachu_1_1_logger}{Logger}
+\begin{DoxyCompactList}\small\item\em Base class for message displaying. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_a_p_i_kachu_aeff09045bb4c289dc6f23d46950d830e}{e\+Http\+Method} \+: uint8 \{ \\*
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+U\+N\+K\+N\+O\+WN} = 0x00, 
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+G\+ET} = 0x01, 
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+P\+O\+ST} = 0x02, 
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+H\+E\+AD} = 0x04, 
+\\*
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+C\+O\+N\+N\+E\+CT} = 0x08, 
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+T\+R\+A\+CE} = 0x10, 
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+P\+UT} = 0x20, 
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+P\+A\+T\+CH} = 0x40, 
+\\*
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+D\+E\+L\+E\+TE} = 0x80, 
+{\bfseries M\+E\+T\+H\+O\+D\+\_\+\+A\+LL} = 0x\+FF
+ \}\begin{DoxyCompactList}\small\item\em Different methods possible for a request. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_a_p_i_kachu_a114c3c51518a62812ae20c3554244347}{e\+Module\+Type} \+: uint8 \{ \\*
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE} = 0x00, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+N\+N\+E\+C\+T\+I\+ON} = 0x01, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+O\+N\+\_\+\+R\+E\+AD} = 0x02, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+IT} = 0x04, 
+\\*
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+A\+R\+S\+I\+NG} = 0x08, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+R\+O\+C\+E\+SS} = 0x10, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+S\+T\+\_\+\+P\+R\+O\+C\+E\+SS} = 0x20, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+O\+N\+\_\+\+W\+R\+I\+TE} = 0x40, 
+\\*
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+ND} = 0x80, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+LL} = 0x\+FF
+ \}\begin{DoxyCompactList}\small\item\em Bitmask representing the steps of processing in which the module will be executed. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_a_p_i_kachu_a89a2d383090085f6b3dbda8547b6b014}{e\+Module\+Flags} \+: uint8 \{ {\bfseries M\+O\+D\+U\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+N\+O\+NE} = 0x00, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+R\+E\+Q\+U\+I\+R\+ED} = 0x01, 
+{\bfseries M\+O\+D\+U\+L\+E\+\_\+\+F\+L\+A\+G\+S\+\_\+\+S\+U\+F\+F\+I\+C\+I\+E\+NT} = 0x02
+ \}\begin{DoxyCompactList}\small\item\em Flags specifying how the return type of exec will be used. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Z\+IA A\+P\+I-\/\+K\+A\+C\+HU (Epitech 2016)
+
+Z\+IA A\+P\+I-\/\+K\+A\+C\+HU (Epitech 2018) 
+
+\subsection{Enumeration Type Documentation}
+\index{A\+P\+I\+Kachu@{A\+P\+I\+Kachu}!e\+Http\+Method@{e\+Http\+Method}}
+\index{e\+Http\+Method@{e\+Http\+Method}!A\+P\+I\+Kachu@{A\+P\+I\+Kachu}}
+\subsubsection[{\texorpdfstring{e\+Http\+Method}{eHttpMethod}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\+P\+I\+Kachu\+::e\+Http\+Method} \+: uint8}\hypertarget{namespace_a_p_i_kachu_aeff09045bb4c289dc6f23d46950d830e}{}\label{namespace_a_p_i_kachu_aeff09045bb4c289dc6f23d46950d830e}
+
+
+Different methods possible for a request. 
+
+Used as a bitmask for modules (see documentation for \hyperlink{class_a_p_i_kachu_1_1_i_module_aaad7d8817c8b1344fbe310d7e5e85404}{I\+Module\+::get\+Handled\+Methods()}) \index{A\+P\+I\+Kachu@{A\+P\+I\+Kachu}!e\+Module\+Flags@{e\+Module\+Flags}}
+\index{e\+Module\+Flags@{e\+Module\+Flags}!A\+P\+I\+Kachu@{A\+P\+I\+Kachu}}
+\subsubsection[{\texorpdfstring{e\+Module\+Flags}{eModuleFlags}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\+P\+I\+Kachu\+::e\+Module\+Flags} \+: uint8}\hypertarget{namespace_a_p_i_kachu_a89a2d383090085f6b3dbda8547b6b014}{}\label{namespace_a_p_i_kachu_a89a2d383090085f6b3dbda8547b6b014}
+
+
+Flags specifying how the return type of exec will be used. 
+
+None = the return type will have no impact on the request Required = if the return type is false, send the response and stop processing further Sufficient = if the return type is true, check other required modules and send the response Required $\vert$ Sufficient = if the return type is true, send the response and stop processing further 
+\begin{DoxyParams}{Parameters}
+{\em uint16} & status \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu@{A\+P\+I\+Kachu}!e\+Module\+Type@{e\+Module\+Type}}
+\index{e\+Module\+Type@{e\+Module\+Type}!A\+P\+I\+Kachu@{A\+P\+I\+Kachu}}
+\subsubsection[{\texorpdfstring{e\+Module\+Type}{eModuleType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\+P\+I\+Kachu\+::e\+Module\+Type} \+: uint8}\hypertarget{namespace_a_p_i_kachu_a114c3c51518a62812ae20c3554244347}{}\label{namespace_a_p_i_kachu_a114c3c51518a62812ae20c3554244347}
+
+
+Bitmask representing the steps of processing in which the module will be executed. 
+
+See on the documentation\textquotesingle{}s main page for other informations 

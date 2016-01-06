@@ -1,0 +1,123 @@
+\hypertarget{class_a_p_i_kachu_1_1_i_http_transaction}{}\section{A\+P\+I\+Kachu\+:\+:I\+Http\+Transaction Class Reference}
+\label{class_a_p_i_kachu_1_1_i_http_transaction}\index{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}}
+
+
+Class containing informations about an H\+T\+TP transaction.  
+
+
+
+
+{\ttfamily \#include $<$I\+Http\+Transaction.\+h$>$}
+
+Inheritance diagram for A\+P\+I\+Kachu\+:\+:I\+Http\+Transaction\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_p_i_kachu_1_1_i_http_transaction}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction_a4d764f4e4e7e6a9f977cb849e56f9540}{set\+Http\+Request} (\hyperlink{class_a_p_i_kachu_1_1_i_http_request}{I\+Http\+Request} $\ast$request)=0
+\begin{DoxyCompactList}\small\item\em Setter for the http request. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction_a42505225ef609ed6b2809b740fb1a057}{set\+Http\+Response} (\hyperlink{class_a_p_i_kachu_1_1_i_http_response}{I\+Http\+Response} $\ast$response)=0
+\begin{DoxyCompactList}\small\item\em Setter for the http response. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_a_p_i_kachu_1_1_i_http_client}{I\+Http\+Client} $\ast$ \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction_a5c36ff3eb4eda6cd2c981a7f595fe26f}{get\+Http\+Client} ()=0
+\begin{DoxyCompactList}\small\item\em Getter for the client sending the request. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_a_p_i_kachu_1_1_i_http_request}{I\+Http\+Request} $\ast$ \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction_a6e2cac980600fc7ac2f7d13c366e5e0a}{get\+Http\+Request} ()=0
+\begin{DoxyCompactList}\small\item\em Getter for the http request of the transaction. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_a_p_i_kachu_1_1_i_http_response}{I\+Http\+Response} $\ast$ \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction_a12da5989c6c9417c7c4b80e02345937c}{get\+Http\+Response} ()=0
+\begin{DoxyCompactList}\small\item\em Getter for the http response of the transaction. \end{DoxyCompactList}\item 
+virtual const \hyperlink{struct_a_p_i_kachu_1_1_byte_buffer}{Byte\+Buffer} \& \hyperlink{class_a_p_i_kachu_1_1_i_http_transaction_a83b2b8c2fc400512de18a996bae835ae}{get\+Raw\+Request} ()=0
+\begin{DoxyCompactList}\small\item\em Getter for the raw data of the received packet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class containing informations about an H\+T\+TP transaction. 
+
+Defines the request, the client sending it, and the response built by the server 
+
+\subsection{Member Function Documentation}
+\index{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}!get\+Http\+Client@{get\+Http\+Client}}
+\index{get\+Http\+Client@{get\+Http\+Client}!A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}}
+\subsubsection[{\texorpdfstring{get\+Http\+Client()=0}{getHttpClient()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Http\+Client}$\ast$ A\+P\+I\+Kachu\+::\+I\+Http\+Transaction\+::get\+Http\+Client (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_transaction_a5c36ff3eb4eda6cd2c981a7f595fe26f}{}\label{class_a_p_i_kachu_1_1_i_http_transaction_a5c36ff3eb4eda6cd2c981a7f595fe26f}
+
+
+Getter for the client sending the request. 
+
+This should be set by the server upon receiving a packet \index{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}!get\+Http\+Request@{get\+Http\+Request}}
+\index{get\+Http\+Request@{get\+Http\+Request}!A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}}
+\subsubsection[{\texorpdfstring{get\+Http\+Request()=0}{getHttpRequest()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Http\+Request}$\ast$ A\+P\+I\+Kachu\+::\+I\+Http\+Transaction\+::get\+Http\+Request (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_transaction_a6e2cac980600fc7ac2f7d13c366e5e0a}{}\label{class_a_p_i_kachu_1_1_i_http_transaction_a6e2cac980600fc7ac2f7d13c366e5e0a}
+
+
+Getter for the http request of the transaction. 
+
+Returns nullptr if the request has not been parsed yet \index{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}!get\+Http\+Response@{get\+Http\+Response}}
+\index{get\+Http\+Response@{get\+Http\+Response}!A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}}
+\subsubsection[{\texorpdfstring{get\+Http\+Response()=0}{getHttpResponse()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf I\+Http\+Response}$\ast$ A\+P\+I\+Kachu\+::\+I\+Http\+Transaction\+::get\+Http\+Response (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_transaction_a12da5989c6c9417c7c4b80e02345937c}{}\label{class_a_p_i_kachu_1_1_i_http_transaction_a12da5989c6c9417c7c4b80e02345937c}
+
+
+Getter for the http response of the transaction. 
+
+Returns nullptr if the response has not been built yet \index{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}!get\+Raw\+Request@{get\+Raw\+Request}}
+\index{get\+Raw\+Request@{get\+Raw\+Request}!A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}}
+\subsubsection[{\texorpdfstring{get\+Raw\+Request()=0}{getRawRequest()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Byte\+Buffer}\& A\+P\+I\+Kachu\+::\+I\+Http\+Transaction\+::get\+Raw\+Request (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_transaction_a83b2b8c2fc400512de18a996bae835ae}{}\label{class_a_p_i_kachu_1_1_i_http_transaction_a83b2b8c2fc400512de18a996bae835ae}
+
+
+Getter for the raw data of the received packet. 
+
+Should be set by the server upon receiving a packet
+
+See documentation for \hyperlink{struct_a_p_i_kachu_1_1_byte_buffer}{Byte\+Buffer} \index{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}!set\+Http\+Request@{set\+Http\+Request}}
+\index{set\+Http\+Request@{set\+Http\+Request}!A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}}
+\subsubsection[{\texorpdfstring{set\+Http\+Request(\+I\+Http\+Request $\ast$request)=0}{setHttpRequest(IHttpRequest *request)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\+P\+I\+Kachu\+::\+I\+Http\+Transaction\+::set\+Http\+Request (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Http\+Request} $\ast$}]{request}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_transaction_a4d764f4e4e7e6a9f977cb849e56f9540}{}\label{class_a_p_i_kachu_1_1_i_http_transaction_a4d764f4e4e7e6a9f977cb849e56f9540}
+
+
+Setter for the http request. 
+
+Should be used by the first module when parsing the request 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_a_p_i_kachu_1_1_i_http_request}{I\+Http\+Request}} & $\ast$request \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}!set\+Http\+Response@{set\+Http\+Response}}
+\index{set\+Http\+Response@{set\+Http\+Response}!A\+P\+I\+Kachu\+::\+I\+Http\+Transaction@{A\+P\+I\+Kachu\+::\+I\+Http\+Transaction}}
+\subsubsection[{\texorpdfstring{set\+Http\+Response(\+I\+Http\+Response $\ast$response)=0}{setHttpResponse(IHttpResponse *response)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\+P\+I\+Kachu\+::\+I\+Http\+Transaction\+::set\+Http\+Response (
+\begin{DoxyParamCaption}
+\item[{{\bf I\+Http\+Response} $\ast$}]{response}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_transaction_a42505225ef609ed6b2809b740fb1a057}{}\label{class_a_p_i_kachu_1_1_i_http_transaction_a42505225ef609ed6b2809b740fb1a057}
+
+
+Setter for the http response. 
+
+Should be used by the first module when building the response 
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{class_a_p_i_kachu_1_1_i_http_response}{I\+Http\+Response}} & $\ast$response \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mathieu/\+Documents/\+Git\+Hub/\+A\+P\+I-\/\+M\+E\+A\+L/\+A\+P\+I/I\+Http\+Transaction.\+h\end{DoxyCompactItemize}

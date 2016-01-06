@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>API KACHU by ZIA QUOI ?!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+	<div class="header-grid">
+	<div class="grid-left">
+      <h1 class="project-name">API KACHU</h1>
+	  <h4><i>L'API qui fait le café, coup de foudre garanti.</i></h4>
+	  <div class="grid-right">
+		<a href="index.html"><img class="pikachu" src="images/pikachu.png"></a>
+	</div> 
+      <h2 class="project-tagline">API Epitech for ZIA Project (Promo 2018)</h2>
+      <a href="https://github.com/ziapikachu/API-KACHU" class="btn">View on GitHub</a>
+      <a href="https://github.com/ziapikachu/API-KACHU/archive/master.zip" class="btn">Download .zip</a>
+	  <a href="doc/html/index.html" class="btn">Documentation</a>
+	  <a href="uml.html" class="btn">UML</a>
+	  <a href="exemple.html" class="btn">Exemple</a>
+	  <a href="faq.html" class="btn">FAQ</a>
+	</div>
+	 </div>
+    </section>
+	<section class="diagram">
+			<div class="example">
+			<h1 style="color:#e36324">Exemple de Hello World</h1>
+			
+			
+		<h3>HelloWorld.h</h3>
+			<code><pre><div class="code" spellcheck="false" readonly>
+#ifndef			HELLOWORLD_H_
+#define			HELLOWORLD_H_
+
+#include		"../../sources/IModule.h"
+<span style="color:#51C42B">
+/*
+  This is the parent class of every class within the implementation of the API.
+*/</span>
+class			HelloObject : virtual public APIKachu::IAPIObject
+{
+  public:
+    HelloObject();
+    virtual ~HelloObject() = default;
+
+    uint32		getAPIMagic() const;
+    uint32		getAPIVersion() const;
+};
+<span style="color:#51C42B">
+/*
+  Basic implementation of a module.
+  Basically the goal here is to display "hello world" within the processing step of execution.
+*/</span>
+class			HelloWorld : public APIKachu::IModule, public HelloObject
+{
+  public:
+    HelloWorld();
+    ~HelloWorld() = default;
+	<span style="color:#51C42B">
+    /*
+      This function will be called by the server when processing an http request (see documentation for APIKachu::IHttpRequest)
+      We want the displaying to happen here.
+    */</span>
+    bool		exec(APIKachu::IHttpTransaction *transaction);
+	<span style="color:#51C42B">
+    /*
+      The starting routine that will get executed by the server when the module is loaded.
+      We are stocking the server in that function to be able to access to its logger in the exec function.
+    */</span>
+    bool		init(APIKachu::IServer *server);
+	<span style="color:#51C42B">
+    /*
+      Returns the step of execution where the module will be used (see documentation for APIKachu::IModule::getModuleType())
+      Our module doesn't do anything, so we could execute it anywhere in the execution chain.
+    */</span>
+    uint8		getModuleType() const;
+	<span style="color:#51C42B">
+    /*
+      Returns how the return value of the exec function will be interpreted (see documentation for APIKachu::IModule::getModuleFlags())
+      As our module is just for testing, we can set this to APIKachu::MODULE_FLAGS_NONE to completely ignore the return type.
+    */</span>
+    uint8		getModuleFlags() const;
+	<span style="color:#51C42B">
+    /*
+      Returns the methods that the module can handle. (see documentation for APIKachu::IModule::getHandledMethods())
+      We can set this to APIKachu::METHOD_ALL for testing.
+    */</span>
+    uint8		getHandledMethods() const;
+		
+  private:
+    APIKachu::IServer	*m_server;
+};
+
+#endif
+
+
+		</pre></code>
+		</div>
+			
+			
+			<h3>HelloWorld.cpp</h3>
+			<code><pre><div class="code" spellcheck="false" readonly>
+#include		"../../sources/IServer.h"
+#include		"../../sources/Logger.h"
+
+#include		"HelloWorld.h"
+
+HelloObject::HelloObject() :
+  APIKachu::IAPIObject()
+{
+}
+
+uint32			HelloObject::getAPIMagic() const
+{<span style="color:#51C42B">
+  /*
+    Here we return a magic number that serves as an identifier for our implementation.
+    This way we can know where a given module comes from and adapt our behaviour to it.
+    You should use a unique number that is very unlikely to be used by anyone else here.
+  */</span>
+  return (0x78447844);
+}
+
+uint32			HelloObject::getAPIVersion() const
+{<span style="color:#51C42B">
+  /*
+    This serves as the version of the implementation.
+    It allows us to know which version of a given api a module comes from, completing the magic number.
+  */</span>
+  return (0);
+}
+<span style="color:#51C42B">
+/* ---- */
+</span>
+HelloWorld::HelloWorld() :
+  HelloObject(),
+  APIKachu::IModule()
+{
+}
+
+bool			HelloWorld::exec(APIKachu::IHttpTransaction *transaction)
+{<span style="color:#51C42B">
+  /*
+    We stocked the server as this->m_server, so we can use its getLogger() function to retrieve the logger.
+    Then, outBasic serves as a printf function for a basic message (see documentation for APIKachu::Logger).
+  */</span>
+  m_server->getLogger().outBasic("%s\n", "Hello world!");
+  return (true);
+}
+
+bool			HelloWorld::init(APIKachu::IServer *server)
+{<span style="color:#51C42B">
+  /*
+    We're stocking the server here so we can use it in the exec function later on.
+  */</span>
+  m_server = server;
+  return (true);
+}
+
+uint8			HelloWorld::getModuleType() const
+{
+  return (APIKachu::MODULE_TYPE_PROCESS);
+}
+
+uint8			HelloWorld::getModuleFlags() const
+{
+  return (APIKachu::MODULE_FLAGS_REQUIRED);
+}
+
+uint8			HelloWorld::getHandledMethods() const
+{
+  return (APIKachu::METHOD_ALL);
+}
+<span style="color:#51C42B">
+/*
+  This is the function that will get loaded with dlsym() and other similar functions by the server.
+*/</span>
+APIKachu::IModule	*getModule()
+{
+  return (new HelloWorld());
+}
+</pre></code></div>
+	</section>
+	
+	</body>
+	</html>

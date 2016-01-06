@@ -1,0 +1,85 @@
+\hypertarget{class_a_p_i_kachu_1_1_i_config}{}\section{A\+P\+I\+Kachu\+:\+:I\+Config Class Reference}
+\label{class_a_p_i_kachu_1_1_i_config}\index{A\+P\+I\+Kachu\+::\+I\+Config@{A\+P\+I\+Kachu\+::\+I\+Config}}
+
+
+Base interface for the configuration of the server.  
+
+
+
+
+{\ttfamily \#include $<$I\+Config.\+h$>$}
+
+Inheritance diagram for A\+P\+I\+Kachu\+:\+:I\+Config\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_p_i_kachu_1_1_i_config}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \hyperlink{class_a_p_i_kachu_1_1_i_config_a117be9b809a9ef2b8bb5ad6834cf2c89}{load} (const std\+::string \&path)=0
+\begin{DoxyCompactList}\small\item\em Loads the configuration file. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_a_p_i_kachu_1_1_i_config_afec3895b88c9f42c1a8e4bf4a79d64cc}{has\+Value} (const std\+::string \&key)=0
+\begin{DoxyCompactList}\small\item\em Checks the existence of a value in the configuration file. \end{DoxyCompactList}\item 
+virtual const \hyperlink{class_a_p_i_kachu_1_1_i_config_value}{I\+Config\+Value} \& \hyperlink{class_a_p_i_kachu_1_1_i_config_a1dd2e1023713d6720746d0b02de301c8}{get\+Value} (const std\+::string \&key)=0
+\begin{DoxyCompactList}\small\item\em Retrieves a value from the configuration file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base interface for the configuration of the server. 
+
+\subsection{Member Function Documentation}
+\index{A\+P\+I\+Kachu\+::\+I\+Config@{A\+P\+I\+Kachu\+::\+I\+Config}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!A\+P\+I\+Kachu\+::\+I\+Config@{A\+P\+I\+Kachu\+::\+I\+Config}}
+\subsubsection[{\texorpdfstring{get\+Value(const std\+::string \&key)=0}{getValue(const std::string &key)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf I\+Config\+Value}\& A\+P\+I\+Kachu\+::\+I\+Config\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_config_a1dd2e1023713d6720746d0b02de301c8}{}\label{class_a_p_i_kachu_1_1_i_config_a1dd2e1023713d6720746d0b02de301c8}
+
+
+Retrieves a value from the configuration file. 
+
+Users should always check if the value exists beforehand ; behaviour is undefined otherwise 
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & key \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+I\+Config@{A\+P\+I\+Kachu\+::\+I\+Config}!has\+Value@{has\+Value}}
+\index{has\+Value@{has\+Value}!A\+P\+I\+Kachu\+::\+I\+Config@{A\+P\+I\+Kachu\+::\+I\+Config}}
+\subsubsection[{\texorpdfstring{has\+Value(const std\+::string \&key)=0}{hasValue(const std::string &key)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool A\+P\+I\+Kachu\+::\+I\+Config\+::has\+Value (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_config_afec3895b88c9f42c1a8e4bf4a79d64cc}{}\label{class_a_p_i_kachu_1_1_i_config_afec3895b88c9f42c1a8e4bf4a79d64cc}
+
+
+Checks the existence of a value in the configuration file. 
+
+Returns true if the value exists 
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & key \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+I\+Config@{A\+P\+I\+Kachu\+::\+I\+Config}!load@{load}}
+\index{load@{load}!A\+P\+I\+Kachu\+::\+I\+Config@{A\+P\+I\+Kachu\+::\+I\+Config}}
+\subsubsection[{\texorpdfstring{load(const std\+::string \&path)=0}{load(const std::string &path)=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool A\+P\+I\+Kachu\+::\+I\+Config\+::load (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_config_a117be9b809a9ef2b8bb5ad6834cf2c89}{}\label{class_a_p_i_kachu_1_1_i_config_a117be9b809a9ef2b8bb5ad6834cf2c89}
+
+
+Loads the configuration file. 
+
+Returns true if the loading has succeeded 
+\begin{DoxyParams}{Parameters}
+{\em std\+::string} & path \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mathieu/\+Documents/\+Git\+Hub/\+A\+P\+I-\/\+M\+E\+A\+L/\+A\+P\+I/I\+Config.\+h\end{DoxyCompactItemize}
