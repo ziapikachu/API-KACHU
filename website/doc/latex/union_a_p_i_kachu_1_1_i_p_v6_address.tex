@@ -1,0 +1,44 @@
+\hypertarget{union_a_p_i_kachu_1_1_i_p_v6_address}{}\section{A\+P\+I\+Kachu\+:\+:I\+P\+V6\+Address Union Reference}
+\label{union_a_p_i_kachu_1_1_i_p_v6_address}\index{A\+P\+I\+Kachu\+::\+I\+P\+V6\+Address@{A\+P\+I\+Kachu\+::\+I\+P\+V6\+Address}}
+
+
+Data structure for an I\+P\+V6 Address.  
+
+
+
+
+{\ttfamily \#include $<$I\+I\+P\+Adress.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>union \{\\
+\>\>char {\bfseries networkBytes} \mbox{[}8\mbox{]}\\
+\>\>uint64 {\bfseries network}\\
+\>\} \hypertarget{struct_a_p_i_kachu_1_1_i_p_v6_address_1_1_0D0_a0c45af265efe0755387451310ff96b05}{}\label{struct_a_p_i_kachu_1_1_i_p_v6_address_1_1_0D0_a0c45af265efe0755387451310ff96b05}
+\\
+\>union \{\\
+\>\>char {\bfseries hostBytes} \mbox{[}8\mbox{]}\\
+\>\>uint64 {\bfseries host}\\
+\>\} \hypertarget{struct_a_p_i_kachu_1_1_i_p_v6_address_1_1_0D0_a71822f00321e77021398ec740db4bb73}{}\label{struct_a_p_i_kachu_1_1_i_p_v6_address_1_1_0D0_a71822f00321e77021398ec740db4bb73}
+\\
+\}; \hypertarget{union_a_p_i_kachu_1_1_i_p_v6_address_a998fd168c709d710627fa6edb44697bf}{}\label{union_a_p_i_kachu_1_1_i_p_v6_address_a998fd168c709d710627fa6edb44697bf}
+\\
+
+\end{tabbing}\item 
+char {\bfseries bytes} \mbox{[}16\mbox{]}\hypertarget{union_a_p_i_kachu_1_1_i_p_v6_address_aa5ad968e981279d5282f6ee5245f777a}{}\label{union_a_p_i_kachu_1_1_i_p_v6_address_aa5ad968e981279d5282f6ee5245f777a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Data structure for an I\+P\+V6 Address. 
+
+Provides access to raw bytes or the net and host I\+Ds themselves 
+
+The documentation for this union was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mathieu/\+Documents/\+Git\+Hub/\+A\+P\+I-\/\+M\+E\+A\+L/sources/I\+I\+P\+Adress.\+h\end{DoxyCompactItemize}

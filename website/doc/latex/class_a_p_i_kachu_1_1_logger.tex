@@ -1,0 +1,204 @@
+\hypertarget{class_a_p_i_kachu_1_1_logger}{}\section{A\+P\+I\+Kachu\+:\+:Logger Class Reference}
+\label{class_a_p_i_kachu_1_1_logger}\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+
+
+Base class for message displaying.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\+h$>$}
+
+Inheritance diagram for A\+P\+I\+Kachu\+:\+:Logger\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_a_p_i_kachu_1_1_logger}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_a_p_i_kachu_1_1_logger_af1782b2d51f63b086775b671b3c8de52}{Log\+Type} \+: uint8 \{ \\*
+{\bfseries L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+NE} = 0x00, 
+{\bfseries L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IC} = 0x01, 
+{\bfseries L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+OR} = 0x02, 
+{\bfseries L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+B\+UG} = 0x04, 
+\\*
+{\bfseries L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+T\+A\+IL} = 0x08, 
+{\bfseries L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+LL} = 0x\+FF
+ \}\begin{DoxyCompactList}\small\item\em Type of a message to be logged. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_p_i_kachu_1_1_logger_a0f36a216974696dc4b5e55bfe77a1bfa}{Logger} (uint8 log\+Type)
+\begin{DoxyCompactList}\small\item\em Constructor for the logger. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_a_p_i_kachu_1_1_logger_a8654a8cafaae01e3cdb8d8ba2bd9621a}{$\sim$\+Logger} ()=default\hypertarget{class_a_p_i_kachu_1_1_logger_a8654a8cafaae01e3cdb8d8ba2bd9621a}{}\label{class_a_p_i_kachu_1_1_logger_a8654a8cafaae01e3cdb8d8ba2bd9621a}
+
+\begin{DoxyCompactList}\small\item\em Destructor for the logger. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_a_p_i_kachu_1_1_logger_a71f7b72c8f52540468afd1eb0a9079cf}{set\+Log\+Type} (uint8 new\+Log\+Type)
+\begin{DoxyCompactList}\small\item\em Setter for the log type. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_p_i_kachu_1_1_logger_a70dc2e7e6240a77054d33ca22b0ef1f9}{set\+File} (F\+I\+LE $\ast$file)
+\begin{DoxyCompactList}\small\item\em Setter for the log file. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \hyperlink{class_a_p_i_kachu_1_1_logger_ad74e704ae848ac5113e9a9e28337d455}{out\+Basic} (const char $\ast$format, const Args \&...args)
+\begin{DoxyCompactList}\small\item\em Outputs a basic message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \hyperlink{class_a_p_i_kachu_1_1_logger_a6cbf04b8db00bcb707981722d67e1a8e}{out\+Error} (const char $\ast$format, const Args \&...args)
+\begin{DoxyCompactList}\small\item\em Outputs an error message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \hyperlink{class_a_p_i_kachu_1_1_logger_a42e6ed2289a67d7c9b04558940e385e3}{out\+Debug} (const char $\ast$format, const Args \&...args)
+\begin{DoxyCompactList}\small\item\em Outputs a debug message. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \hyperlink{class_a_p_i_kachu_1_1_logger_ac310be8ea14351cba3c21b4ba770531a}{out\+Detail} (const char $\ast$format, const Args \&...args)
+\begin{DoxyCompactList}\small\item\em Outputs a detail message. \end{DoxyCompactList}\item 
+virtual uint8 \hyperlink{class_a_p_i_kachu_1_1_logger_a2ad6555c3e1c745da1aa824a9c59ae0c}{get\+Log\+Type} () const \hypertarget{class_a_p_i_kachu_1_1_logger_a2ad6555c3e1c745da1aa824a9c59ae0c}{}\label{class_a_p_i_kachu_1_1_logger_a2ad6555c3e1c745da1aa824a9c59ae0c}
+
+\begin{DoxyCompactList}\small\item\em Getter for the log type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for message displaying. 
+
+\hyperlink{class_a_p_i_kachu_1_1_logger}{Logger} for outputting messages to the console or a file 
+
+\subsection{Member Enumeration Documentation}
+\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}!Log\+Type@{Log\+Type}}
+\index{Log\+Type@{Log\+Type}!A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+\subsubsection[{\texorpdfstring{Log\+Type}{LogType}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\+P\+I\+Kachu\+::\+Logger\+::\+Log\+Type} \+: uint8}\hypertarget{class_a_p_i_kachu_1_1_logger_af1782b2d51f63b086775b671b3c8de52}{}\label{class_a_p_i_kachu_1_1_logger_af1782b2d51f63b086775b671b3c8de52}
+
+
+Type of a message to be logged. 
+
+Specifies different types of messages ; used as a bitmask in the configuration (see documentation for configuration) 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}!Logger@{Logger}}
+\index{Logger@{Logger}!A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+\subsubsection[{\texorpdfstring{Logger(uint8 log\+Type)}{Logger(uint8 logType)}}]{\setlength{\rightskip}{0pt plus 5cm}A\+P\+I\+Kachu\+::\+Logger\+::\+Logger (
+\begin{DoxyParamCaption}
+\item[{uint8}]{log\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_a_p_i_kachu_1_1_logger_a0f36a216974696dc4b5e55bfe77a1bfa}{}\label{class_a_p_i_kachu_1_1_logger_a0f36a216974696dc4b5e55bfe77a1bfa}
+
+
+Constructor for the logger. 
+
+Constructs the logger and assigns a type for filtering incoming messages 
+\begin{DoxyParams}{Parameters}
+{\em uint8} & logtype -\/ bitmask specifying message types to display \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}!out\+Basic@{out\+Basic}}
+\index{out\+Basic@{out\+Basic}!A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+\subsubsection[{\texorpdfstring{out\+Basic(const char $\ast$format, const Args \&...\+args)}{outBasic(const char *format, const Args &...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void A\+P\+I\+Kachu\+::\+Logger\+::out\+Basic (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{const Args \&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_a_p_i_kachu_1_1_logger_ad74e704ae848ac5113e9a9e28337d455}{}\label{class_a_p_i_kachu_1_1_logger_ad74e704ae848ac5113e9a9e28337d455}
+
+
+Outputs a basic message. 
+
+Only outputs a message if the logger\textquotesingle{}s log type contains L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IC 
+\begin{DoxyParams}{Parameters}
+{\em const} & char $\ast$ format -\/ printf-\/type format \\
+\hline
+{\em ...} & -\/ arguments for the format \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}!out\+Debug@{out\+Debug}}
+\index{out\+Debug@{out\+Debug}!A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+\subsubsection[{\texorpdfstring{out\+Debug(const char $\ast$format, const Args \&...\+args)}{outDebug(const char *format, const Args &...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void A\+P\+I\+Kachu\+::\+Logger\+::out\+Debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{const Args \&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_a_p_i_kachu_1_1_logger_a42e6ed2289a67d7c9b04558940e385e3}{}\label{class_a_p_i_kachu_1_1_logger_a42e6ed2289a67d7c9b04558940e385e3}
+
+
+Outputs a debug message. 
+
+Only outputs a message if the logger\textquotesingle{}s log type contains L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+B\+UG 
+\begin{DoxyParams}{Parameters}
+{\em const} & char $\ast$ format -\/ printf-\/type format \\
+\hline
+{\em ...} & -\/ arguments for the format \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}!out\+Detail@{out\+Detail}}
+\index{out\+Detail@{out\+Detail}!A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+\subsubsection[{\texorpdfstring{out\+Detail(const char $\ast$format, const Args \&...\+args)}{outDetail(const char *format, const Args &...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void A\+P\+I\+Kachu\+::\+Logger\+::out\+Detail (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{const Args \&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_a_p_i_kachu_1_1_logger_ac310be8ea14351cba3c21b4ba770531a}{}\label{class_a_p_i_kachu_1_1_logger_ac310be8ea14351cba3c21b4ba770531a}
+
+
+Outputs a detail message. 
+
+Only outputs a message if the logger\textquotesingle{}s log type contains L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+E\+T\+A\+IL 
+\begin{DoxyParams}{Parameters}
+{\em const} & char $\ast$ format -\/ printf-\/type format \\
+\hline
+{\em ...} & -\/ arguments for the format \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}!out\+Error@{out\+Error}}
+\index{out\+Error@{out\+Error}!A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+\subsubsection[{\texorpdfstring{out\+Error(const char $\ast$format, const Args \&...\+args)}{outError(const char *format, const Args &...args)}}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename... Args$>$ void A\+P\+I\+Kachu\+::\+Logger\+::out\+Error (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{const Args \&...}]{args}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_a_p_i_kachu_1_1_logger_a6cbf04b8db00bcb707981722d67e1a8e}{}\label{class_a_p_i_kachu_1_1_logger_a6cbf04b8db00bcb707981722d67e1a8e}
+
+
+Outputs an error message. 
+
+Only outputs a message if the logger\textquotesingle{}s log type contains L\+O\+G\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+R\+R\+OR 
+\begin{DoxyParams}{Parameters}
+{\em const} & char $\ast$ format -\/ printf-\/type format \\
+\hline
+{\em ...} & -\/ arguments for the format \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}!set\+File@{set\+File}}
+\index{set\+File@{set\+File}!A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+\subsubsection[{\texorpdfstring{set\+File(\+F\+I\+L\+E $\ast$file)}{setFile(FILE *file)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+P\+I\+Kachu\+::\+Logger\+::set\+File (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_a_p_i_kachu_1_1_logger_a70dc2e7e6240a77054d33ca22b0ef1f9}{}\label{class_a_p_i_kachu_1_1_logger_a70dc2e7e6240a77054d33ca22b0ef1f9}
+
+
+Setter for the log file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em F\+I\+LE} & $\ast$file -\/ log file ; null redirect to stdout or stderr for errors \\
+\hline
+\end{DoxyParams}
+\index{A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}!set\+Log\+Type@{set\+Log\+Type}}
+\index{set\+Log\+Type@{set\+Log\+Type}!A\+P\+I\+Kachu\+::\+Logger@{A\+P\+I\+Kachu\+::\+Logger}}
+\subsubsection[{\texorpdfstring{set\+Log\+Type(uint8 new\+Log\+Type)}{setLogType(uint8 newLogType)}}]{\setlength{\rightskip}{0pt plus 5cm}void A\+P\+I\+Kachu\+::\+Logger\+::set\+Log\+Type (
+\begin{DoxyParamCaption}
+\item[{uint8}]{new\+Log\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_a_p_i_kachu_1_1_logger_a71f7b72c8f52540468afd1eb0a9079cf}{}\label{class_a_p_i_kachu_1_1_logger_a71f7b72c8f52540468afd1eb0a9079cf}
+
+
+Setter for the log type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unit8} & new\+Log\+Type -\/ bitmask specifying message types to display \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mathieu/\+Documents/\+Git\+Hub/\+A\+P\+I-\/\+M\+E\+A\+L/\+A\+P\+I/Logger.\+h\item 
+C\+:/\+Users/\+Mathieu/\+Documents/\+Git\+Hub/\+A\+P\+I-\/\+M\+E\+A\+L/\+A\+P\+I/Logger.\+cpp\end{DoxyCompactItemize}

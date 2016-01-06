@@ -1,0 +1,90 @@
+\hypertarget{class_a_p_i_kachu_1_1_i_http_query}{}\section{A\+P\+I\+Kachu\+:\+:I\+Http\+Query Class Reference}
+\label{class_a_p_i_kachu_1_1_i_http_query}\index{A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}}
+
+
+Base class for an H\+T\+TP query.  
+
+
+
+
+{\ttfamily \#include $<$I\+Http\+Query.\+h$>$}
+
+Inheritance diagram for A\+P\+I\+Kachu\+:\+:I\+Http\+Query\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_a_p_i_kachu_1_1_i_http_query}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, std\+::string $>$ \hyperlink{class_a_p_i_kachu_1_1_i_http_query_a15c3c9bc16ea76d23181bdc95e3ecca7}{t\+Headers}
+\begin{DoxyCompactList}\small\item\em Associative container for http headers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual const \hyperlink{class_a_p_i_kachu_1_1_i_http_query_a15c3c9bc16ea76d23181bdc95e3ecca7}{t\+Headers} \& \hyperlink{class_a_p_i_kachu_1_1_i_http_query_ad7181b39532a572f26f3ed23e3b8aa4b}{get\+Headers} () const  =0
+\begin{DoxyCompactList}\small\item\em Getter for the http headers. \end{DoxyCompactList}\item 
+virtual const \hyperlink{struct_a_p_i_kachu_1_1_byte_buffer}{Byte\+Buffer} \& \hyperlink{class_a_p_i_kachu_1_1_i_http_query_a0125257a775e3652c170d2f5b35f62d7}{get\+Byte\+Buffer} () const  =0
+\begin{DoxyCompactList}\small\item\em Getter for the content of the query. \end{DoxyCompactList}\item 
+virtual \hyperlink{struct_a_p_i_kachu_1_1_byte_buffer}{Byte\+Buffer} \& \hyperlink{class_a_p_i_kachu_1_1_i_http_query_ab2e6857af2e0fcf8b80d19efff89c971}{get\+Byte\+Buffer} ()=0
+\begin{DoxyCompactList}\small\item\em Getter for the content of the query. \end{DoxyCompactList}\item 
+virtual const std\+::string \& \hyperlink{class_a_p_i_kachu_1_1_i_http_query_afcb8d29d65a39d58aeec117aebbeb210}{get\+H\+T\+T\+P\+Version} () const  =0\hypertarget{class_a_p_i_kachu_1_1_i_http_query_afcb8d29d65a39d58aeec117aebbeb210}{}\label{class_a_p_i_kachu_1_1_i_http_query_afcb8d29d65a39d58aeec117aebbeb210}
+
+\begin{DoxyCompactList}\small\item\em Getter for the http version of the query. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for an H\+T\+TP query. 
+
+Inherited by \hyperlink{class_a_p_i_kachu_1_1_i_http_response}{I\+Http\+Response} and \hyperlink{class_a_p_i_kachu_1_1_i_http_request}{I\+Http\+Request} 
+
+\subsection{Member Typedef Documentation}
+\index{A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}!t\+Headers@{t\+Headers}}
+\index{t\+Headers@{t\+Headers}!A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}}
+\subsubsection[{\texorpdfstring{t\+Headers}{tHeaders}}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, std\+::string$>$ {\bf A\+P\+I\+Kachu\+::\+I\+Http\+Query\+::t\+Headers}}\hypertarget{class_a_p_i_kachu_1_1_i_http_query_a15c3c9bc16ea76d23181bdc95e3ecca7}{}\label{class_a_p_i_kachu_1_1_i_http_query_a15c3c9bc16ea76d23181bdc95e3ecca7}
+
+
+Associative container for http headers. 
+
+Key and values are strings 
+
+\subsection{Member Function Documentation}
+\index{A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}!get\+Byte\+Buffer@{get\+Byte\+Buffer}}
+\index{get\+Byte\+Buffer@{get\+Byte\+Buffer}!A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}}
+\subsubsection[{\texorpdfstring{get\+Byte\+Buffer() const  =0}{getByteBuffer() const  =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf Byte\+Buffer}\& A\+P\+I\+Kachu\+::\+I\+Http\+Query\+::get\+Byte\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_query_a0125257a775e3652c170d2f5b35f62d7}{}\label{class_a_p_i_kachu_1_1_i_http_query_a0125257a775e3652c170d2f5b35f62d7}
+
+
+Getter for the content of the query. 
+
+See documentation for \hyperlink{struct_a_p_i_kachu_1_1_byte_buffer}{Byte\+Buffer} \index{A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}!get\+Byte\+Buffer@{get\+Byte\+Buffer}}
+\index{get\+Byte\+Buffer@{get\+Byte\+Buffer}!A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}}
+\subsubsection[{\texorpdfstring{get\+Byte\+Buffer()=0}{getByteBuffer()=0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Byte\+Buffer}\& A\+P\+I\+Kachu\+::\+I\+Http\+Query\+::get\+Byte\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_query_ab2e6857af2e0fcf8b80d19efff89c971}{}\label{class_a_p_i_kachu_1_1_i_http_query_ab2e6857af2e0fcf8b80d19efff89c971}
+
+
+Getter for the content of the query. 
+
+See documentation for \hyperlink{struct_a_p_i_kachu_1_1_byte_buffer}{Byte\+Buffer} \index{A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}!get\+Headers@{get\+Headers}}
+\index{get\+Headers@{get\+Headers}!A\+P\+I\+Kachu\+::\+I\+Http\+Query@{A\+P\+I\+Kachu\+::\+I\+Http\+Query}}
+\subsubsection[{\texorpdfstring{get\+Headers() const  =0}{getHeaders() const  =0}}]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf t\+Headers}\& A\+P\+I\+Kachu\+::\+I\+Http\+Query\+::get\+Headers (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\hypertarget{class_a_p_i_kachu_1_1_i_http_query_ad7181b39532a572f26f3ed23e3b8aa4b}{}\label{class_a_p_i_kachu_1_1_i_http_query_ad7181b39532a572f26f3ed23e3b8aa4b}
+
+
+Getter for the http headers. 
+
+See documentation for t\+Headers 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Mathieu/\+Documents/\+Git\+Hub/\+A\+P\+I-\/\+M\+E\+A\+L/\+A\+P\+I/I\+Http\+Query.\+h\end{DoxyCompactItemize}
