@@ -38,7 +38,7 @@
 #ifndef			HELLOWORLD_H_
 #define			HELLOWORLD_H_
 
-#include		"../../sources/IModule.h"
+#include		"../../API/IModule.h"
 <span style="color:#51C42B">
 /*
   This is the parent class of every class within the implementation of the API.
@@ -106,8 +106,8 @@ class			HelloWorld : public APIKachu::IModule, public HelloObject
 			
 			<h3>HelloWorld.cpp</h3>
 			<code><pre><div class="code" spellcheck="false" readonly>
-#include		"../../sources/IServer.h"
-#include		"../../sources/Logger.h"
+#include		"../../API/IServer.h"
+#include		"../../API/Logger.h"
 
 #include		"HelloWorld.h"
 

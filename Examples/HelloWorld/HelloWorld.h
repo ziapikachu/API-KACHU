@@ -1,7 +1,7 @@
 #ifndef			HELLOWORLD_H_
 #define			HELLOWORLD_H_
 
-#include		"../../sources/IModule.h"
+#include		"../../API/IModule.h"
 
 /*
   This is the parent class of every class within the implementation of the API.

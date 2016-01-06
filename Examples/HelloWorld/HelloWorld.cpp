@@ -1,5 +1,5 @@
-#include		"../../sources/IServer.h"
-#include		"../../sources/Logger.h"
+#include		"../../API/IServer.h"
+#include		"../../API/Logger.h"
 
 #include		"HelloWorld.h"
 
