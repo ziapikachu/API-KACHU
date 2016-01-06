@@ -1,5 +1,5 @@
 /**
-* ZIA API-KACHU (Epitech 2016)
+* ZIA API-KACHU (Epitech 2018)
 */
 
 #ifndef				_IHTTPREQUEST_H
