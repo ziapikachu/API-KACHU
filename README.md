@@ -1,5 +1,4 @@
 # API-KACHU
-API Epitech for ZIA Project (Promo 2018)
 
 #Qu'est-ce que ApiKachu et pourquoi faut-il voter pour elle ?
 
